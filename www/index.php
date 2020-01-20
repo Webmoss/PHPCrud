@@ -216,7 +216,7 @@
 									</form>
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-success btn-sm">Submit</button>
+									<button type="button" id="edit-user-submit" class="btn btn-success btn-sm">Submit</button>
 									<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
 								</div>
 							</div>
@@ -239,7 +239,7 @@
 										Are you sure you would like to remove this user permanently?
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-success btn-sm">Confirm</button>
+									<button type="button" id="delete-user-submit" class="btn btn-success btn-sm">Confirm</button>
 									<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
 								</div>
 							</div>
