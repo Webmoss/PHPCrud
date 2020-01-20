@@ -78,6 +78,24 @@
 							</tr>
 						</thead>
 						<tbody>
+
+							<!-- <?php // for($i = 0, $size = count($results); $i < $size; ++$i) {  ?>
+								<tr>
+									<th scope="row"><?php // echo $results[$i]['id']; ?></th>
+									<td><?php // echo $results[$i]['first_name']; ?></td> 
+									<td><?php // echo $results[$i]['surname']; ?></td>
+									<td><?php // echo $results[$i]['email']; ?></td>
+									<td class="actions">
+										<span class="table-remove">
+											<button type="button" id="edit-user-<?php // echo $results[$i]['id']; ?>" class="btn btn-success btn-rounded btn-sm my-0 edit-user" data-toggle="modal" data-target="#editUserModal">Edit</button>
+										</span>
+										<span class="table-remove">
+											<button type="button" id="delete-user-<?php // echo $results[$i]['id']; ?>" class="btn btn-danger btn-rounded btn-sm my-0 delete-user" data-toggle="modal" data-target="#modalLRFormDemo">Delete</button>
+										</span>
+									</td>
+								</tr>
+							<?php //} ?> -->
+
 							<tr>
 								<th scope="row">1</th>
 								<td>Mark</td>
@@ -85,10 +103,10 @@
 								<td>@mdo</td>
 								<td class="actions">
 									<span class="table-remove">
-										<button type="button" class="btn btn-success btn-rounded btn-sm my-0" data-toggle="modal" data-target="#editUserModal">Edit</button>
+										<button type="button" class="btn btn-success btn-rounded btn-sm my-0 edit-user" data-toggle="modal" data-target="#editUserModal">Edit</button>
 									</span>
 									<span class="table-remove">
-										<button type="button" class="btn btn-danger btn-rounded btn-sm my-0" data-toggle="modal" data-target="#modalLRFormDemo">Delete</button>
+										<button type="button" class="btn btn-danger btn-rounded btn-sm my-0 delete-user" data-toggle="modal" data-target="#deleteUserModal">Delete</button>
 									</span>
 								</td>
 							</tr>
@@ -99,10 +117,10 @@
 								<td>@fat</td>
 								<td class="actions">
 									<span class="table-remove">
-										<button type="button" class="btn btn-success btn-rounded btn-sm my-0" data-toggle="modal" data-target="#editUserModal">Edit</button>
+										<button type="button" class="btn btn-success btn-rounded btn-sm my-0 edit-user" data-toggle="modal" data-target="#editUserModal">Edit</button>
 									</span>
 									<span class="table-remove">
-										<button type="button" class="btn btn-danger btn-rounded btn-sm my-0" data-toggle="modal" data-target="#modalLRFormDemo">Delete</button>
+										<button type="button" class="btn btn-danger btn-rounded btn-sm my-0 delete-user" data-toggle="modal" data-target="#deleteUserModal">Delete</button>
 									</span>
 								</td>
 							</tr>
@@ -113,10 +131,10 @@
 								<td>@twitter</td>
 								<td class="actions">
 									<span class="table-remove">
-										<button type="button" class="btn btn-success btn-rounded btn-sm my-0" data-toggle="modal" data-target="#editUserModal">Edit</button>
+										<button type="button" class="btn btn-success btn-rounded btn-sm my-0 edit-user" data-toggle="modal" data-target="#editUserModal">Edit</button>
 									</span>
 									<span class="table-remove">
-										<button type="button" class="btn btn-danger btn-rounded btn-sm my-0" data-toggle="modal" data-target="#modalLRFormDemo">Delete</button>
+										<button type="button" class="btn btn-danger btn-rounded btn-sm my-0 delete-user" data-toggle="modal" data-target="#deleteUserModal">Delete</button>
 									</span>
 								</td>
 							</tr>
@@ -127,15 +145,16 @@
 								<td>@twitter</td>
 								<td class="actions">
 									<span class="table-remove">
-										<button type="button" class="btn btn-success btn-rounded btn-sm my-0" data-toggle="modal" data-target="#editUserModal">Edit</button>
+										<button type="button" class="btn btn-success btn-rounded btn-sm my-0 edit-user" data-toggle="modal" data-target="#editUserModal">Edit</button>
 									</span>
 									<span class="table-remove">
-										<button type="button" class="btn btn-danger btn-rounded btn-sm my-0" data-toggle="modal" data-target="#modalLRFormDemo">Delete</button>
+										<button type="button" class="btn btn-danger btn-rounded btn-sm my-0 delete-user" data-toggle="modal" data-target="#deleteUserModal">Delete</button>
 									</span>
 								</td>
 							</tr>
 						</tbody>
 					</table>
+
 
 					<!--Modal: Edit User -->
 					<div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -205,6 +224,28 @@
 					</div>
 					<!--Modal: END Edit User Modal -->
 
+					<!--Modal: Delete User -->
+					<div class="modal fade" id="deleteUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="myModalLabel">Delete User</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<p>
+										Are you sure you would like to remove this user permanently?
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-success btn-sm">Confirm</button>
+									<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Modal: END Delete User Modal -->
 				</div>
 			</div>
 
@@ -267,7 +308,7 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="assets/js/mdb.min.js"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
+  <script type="text/javascript" src="assets/js/custom.js"></script>
 
 </body>
 </html>
