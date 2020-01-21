@@ -17,6 +17,7 @@
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 	<!-- Main Navigation-->
 	<header>
@@ -40,6 +41,9 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">Contact</a>
+						</li>
+						<li class="nav-item justify-end">
+							<a class="nav-link create-user" data-toggle="modal" data-target="#createUserModal" href="#">Create User</a>
 						</li>
 					</ul>
 					<ul class="navbar-nav nav-flex-icons">
@@ -155,6 +159,73 @@
 						</tbody>
 					</table>
 
+					<!--Modal: Create User -->
+					<div class="modal fade" id="createUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Create User</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<!-- Create User Form -->
+									<form class="text-center border border-light p-5 needs-validation was-validated" action="#" novalidate>
+										
+										<div class="form-row mb-4">
+											<label for="firstName">First Name</label>
+											<input type="text" id="firstName" class="form-control is-invalid" placeholder="" required>
+											<div class="invalid-feedback">
+												Please enter your First Name
+											</div>
+										</div>
+
+										<!-- Last name -->
+										<div class="form-row mb-4">
+											<label for="lastName">Last Name</label>
+											<input type="text" id="lastName" class="form-control is-invalid" placeholder="" required>
+											<div class="invalid-feedback">
+												Please enter your Last Name
+											</div>
+										</div>
+
+										<!-- E-mail -->
+										<div class="form-row mb-4">
+											<label for="eMail">Email</label>
+											<input type="email" id="eMail" class="form-control is-invalid" placeholder="" required >
+											<div class="invalid-feedback">
+												Please enter your email address
+											</div>
+										</div>
+
+										<!-- Username -->
+										<div class="form-row mb-4">
+											<label for="userName">Username</label>
+											<input type="text" id="userName" class="form-control is-invalid" placeholder=""required>
+											<div class="invalid-feedback">
+												Please enter your Username
+											</div>
+										</div>
+
+										<!-- Password -->
+										<div class="form-row mb-4">
+											<label for="userPassword">Password</label>
+											<input type="password" id="userPassword" class="form-control is-invalid" placeholder="" required>
+											<div class="invalid-feedback">
+												Please enter a secure Password
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button type="button" id="create-user-submit" class="btn btn-success btn-sm">Submit</button>
+									<button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--Modal: END Create User Modal -->
 
 					<!--Modal: Edit User -->
 					<div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
